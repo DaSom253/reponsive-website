@@ -531,7 +531,7 @@
 .testimonial__avatar:nth-child(odd) {
     margin: 0;
     margin-bottom: 8px;
-}
+} 넵
 
 .testimonial__speech-bubble {
     order: 1;
