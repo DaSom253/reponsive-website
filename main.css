@@ -52,7 +52,6 @@
     cursor: pointer;
     border: none;
     outline: none;
-    padding: 0;
   }
   /* Typography */
   h1 {
@@ -248,12 +247,12 @@
 }
 
 .skill__bar {
-    width: 100%;
     height: 3px;
     background-color: var(--color-grey);
 }
 
 .skill__value {
+    width: 100%;
     height: 3px;
     background-color: var(--color-orange);
 }
@@ -273,7 +272,7 @@
 
 /* Work */
 .work__categorise {
-    margin: 48px;
+    margin: 40px;
 }
 
 .category__btn {
@@ -298,7 +297,7 @@
     display: inline-block;
     line-height: 24px;
     position: relative;
-    top: -28px;
+    top: -20px;
     left: 4px;
     transition: all var(--animation-duration) ease-in;
     opacity: 0;
@@ -336,7 +335,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: var(--color-black);
     width: 100%;
     height: 100%;
     display: flex;
@@ -358,7 +357,7 @@
 }
 
 .project__description h3:after {
-    content: '';
+    content: "";
     display: block;
     position: relative;
     width: 25px;
@@ -391,11 +390,11 @@
 }
 
 .testimonial__avatar:nth-child(odd) {
-    margin-right: 48px;
+    margin-right: 40px;
 }
 
 .testimonial__avatar:nth-child(even) {
-    margin-left: 48px;
+    margin-left: 40px;
 }
 
 .testimonial__speech-bubble {
@@ -404,7 +403,7 @@
     border-radius: var(--size-border-radius);
 }
 
-.testimoial__speech-bubble a{
+.testimoial__speech-bubble a {
     color: var(--color-pink);
 }
 
@@ -433,7 +432,7 @@
     font-size: var(--font-large);
     margin: 24px 0;
 }
-.contact__links:hover {
+.contact__links i:hover {
     transform: scale(1.1);
     color: var(--color-yellow);
     transition: all var(--animation-duration) ease-in;
@@ -471,90 +470,85 @@
         --font-small: 14px;
         --font-micro: 12px;
     }
-}
 
-.navbar__toggle-btn {
-    display: block;
-}
+    .navbar__toggle-btn {
+        display: block;
+        top: 16px;
+        right: 16px;
+        font-size: var(--font-medium);
+    }
 
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--color-pink);
+    }   
 
-.navbar__toggle-btn {
-    display: block;
-    top: 16px;
-    right: 16px;
-    font-size: var(--font-medium);
-}
+    .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
 
-#navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--color-pink);
-}
+    .navar__menu.open {
+        display: block;
+    }
 
-.navbar__menu {
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    display: none;
-}
+    .section {
+        padding: 16px;
+        padding-top: 40px;
+    }
 
-.navar__menu.open {
-    display: block;
-}
+    .about__majors {
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
 
-.section {
-    padding: 16px;
-    padding-top: 40px;
-}
+    .major {
+        margin-bottom: 30px;
+    }
 
-.about__majors {
-    flex-direction: column;
-    margin-top: 30px;
-    margin-bottom: 0px;
-}
+    .testimonial__avatar {
+        width: 120px;
+        height: 120px;
+    }
 
-.major {
-    margin-bottom: 30px;
-}
+    .testmonial {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.testimonial__avatar {
-    width: 120px;
-    height: 120px;
-}
+    .testimonial__avatar:nth-child(even),
+    .testimonial__avatar:nth-child(odd) {
+        margin: 0;
+        margin-bottom: 8px;
+    }
 
-.testmonial {
-    flex-direction: column;
-    align-items: center;
-}
+    .testimonial__speech-bubble {
+        order: 1;
+    }
 
-.testimonial__avatar:nth-child(even),
-.testimonial__avatar:nth-child(odd) {
-    margin: 0;
-    margin-bottom: 8px;
-} 넵
+    .skill {
+        flex-direction: column;
+    }
 
-.testimonial__speech-bubble {
-    order: 1;
-}
+    .category__btn {
+        margin: 4px 0;
+        width: 100%;
+    }
 
-.skill {
-    flex-direction: column;
-}
+    .project {
+        flex-grow: 1;
+    }
 
-.category__btn {
-    margin: 4px 0;
-    width: 100%;
-}
-
-.project {
-    flex-grow: 1;
-}
-
-.arrow-up {
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
-    line-height: 50px;
-    right: 16px;
-    bottom: 16px;
+    .arrow-up {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 50px;
+        right: 16px;
+        bottom: 16px;
+    }
 }
