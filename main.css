@@ -103,6 +103,7 @@
     padding: 16px;
     background-color: transparent;
     transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;
   }
 
 #navbar.navbar--dark {
@@ -127,12 +128,9 @@
     cursor: pointer;
   }
   
-  .navbar__menu__item.active {
+  .navbar__menu__item:hover {
     border: 1px solid white;
     border-radius: var(--size-border-radius);
-  }
-  
-  .navbar__menu__item:hover {
     background-color: var(--color-dark-pink);
     border-radius: var(--size-border-radius);
   }
