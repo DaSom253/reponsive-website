@@ -126,6 +126,7 @@
     margin: 0 4px;
     color: var(--color-white);
     cursor: pointer;
+    border: 1px solid transparent;
   }
   
   .navbar__menu__item:hover {
@@ -476,6 +477,7 @@
     #navbar {
       flex-direction: column;
       align-items: flex-start;
+      background-color: var(--color-pink);
     }
   
     .navbar__menu {
@@ -485,6 +487,10 @@
       display: none;
     }
   
+    .navbar__menu.open {
+      display: block;
+    }
+    
     .about__majors {
       flex-direction: column;
     }
@@ -505,4 +511,29 @@
       width: 80px;
       height: 80px;
     }
+  }
+
+  /* Arrow Up */
+  .arrow-up {
+    display: none;
+    padding: 8px 12px;
+    margin: 0 4px;
+    color: var(--color-white);
+    cursor: pointer;
+    
+    z-index: 1;
+    position: fixed;
+    bottom: 100px; left: 90%;  
+    border-radius: 50%;
+  }
+
+  .arrow-up>i {
+    font-size: var(--font-large);
+    color: var(--color-white);
+  }
+
+  .arrow-up.arrowUp--dark {
+    display: block;
+    background-color: var(--color-pink);
+    /* 자유 padding: 8px; */
   }

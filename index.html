@@ -37,10 +37,12 @@
     </nav>
     <!-- Home -->
     <section id="home">
-        <img src="imgs/mypoto.jpg" alt="profile img" class="home__avatar" width="100" height="100">
-        <h1 class="home__title">안녕하세요 <br/> 안녕하세요 다솜입니다</h1>
-        <h2 class="home__description">설명</h2>
-        <button class="home__contact">어서오세요</button>
+        <div class="home__container">
+            <img src="imgs/mypoto.jpg" alt="profile img" class="home__avatar" width="100" height="100">
+            <h1 class="home__title">안녕하세요 <br/> 안녕하세요 다솜입니다</h1>
+            <h2 class="home__description">설명</h2>
+            <button class="home__contact">어서오세요</button>
+        </div>
     </section>
     <!-- About -->
     <section id="about" class="section section__container">
@@ -312,7 +314,7 @@
         </p>
     </section>
     <!-- Arrow up -->
-    <button class="arrow-up">
+    <button class="arrow-up" data-link="#home">
         <i class="fas fa-arrow-up"></i>
     </button>
 </body>
