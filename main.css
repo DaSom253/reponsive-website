@@ -515,7 +515,7 @@
 
   /* Arrow Up */
   .arrow-up {
-    display: block;
+    opacity: 0;
     background-color: var(--color-pink);
     padding: 8px 12px;
     margin: 0 4px;

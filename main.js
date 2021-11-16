@@ -41,7 +41,7 @@ document.addEventListener("scroll", () => {
 const arrowUpBtn = document.querySelector('.arrow-up');
 const arrowUpBtnHeight = arrowUpBtn.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
-    console.log(1 - window.scrollY/homeHeight);
+    console.log(window.scrollY/homeHeight);
     if(window.scrollY/homeHeight > 1) {
         // arrowUpBtn.classList.add('arrowUp--dark');
         arrowUpBtn.style.opacity = 1;
