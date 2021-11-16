@@ -520,7 +520,7 @@
     margin: 0 4px;
     color: var(--color-white);
     cursor: pointer;
-    transition: all var(--animation-duration) ease-in-out;
+    
     z-index: 1;
     position: fixed;
     bottom: 100px; left: 90%;  

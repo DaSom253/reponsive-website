@@ -54,9 +54,9 @@ document.addEventListener("scroll", () => {
 });
 
 // //arrow-up 투명도 조절
-arrowUpBtn.addEventListener("scroll", () => {
-    arrowUpBtn.style.opacity = window.scrollY*homeHeight + 0.1;
- });
+//arrowUpBtn.addEventListener("scroll", () => {
+//    arrowUpBtn.style.opacity = window.scrollY*homeHeight + 0.1;
+// });
 
 //햄버거 메뉴 클릭 시 
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
