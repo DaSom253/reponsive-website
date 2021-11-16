@@ -4,8 +4,8 @@
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
-    --color-pink: #fe918d;
-    --color-dark-pink: #ff6863;
+    --color-pink: #62e9ee;
+    --color-dark-pink: #3bbcc0;
     --color-black: #4d4d4d;
     --color-dark-grey: #4d4d4d;
     --color-grey: #616161;
@@ -173,6 +173,10 @@
     padding: 8px 12px;
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
+  }
+
+  .home__contact:hover {
+    background-color: #00000020;
   }
   
   /* Section common */
@@ -524,7 +528,7 @@
     
     z-index: 1;
     position: fixed;
-    bottom: 100px; left: 90%;  
+    bottom: 5%; left: 93%;  
     border-radius: 50%;
     transition: all var(--animation-duration) ease-in;
   }
