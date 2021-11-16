@@ -515,7 +515,8 @@
 
   /* Arrow Up */
   .arrow-up {
-    display: none;
+    display: block;
+    background-color: var(--color-pink);
     padding: 8px 12px;
     margin: 0 4px;
     color: var(--color-white);
@@ -525,6 +526,7 @@
     position: fixed;
     bottom: 100px; left: 90%;  
     border-radius: 50%;
+    transition: all var(--animation-duration) ease-in;
   }
 
   .arrow-up>i {
@@ -532,8 +534,8 @@
     color: var(--color-white);
   }
 
-  .arrow-up.arrowUp--dark {
+  /* .arrow-up.arrowUp--dark {
     display: block;
     background-color: var(--color-pink);
     /* 자유 padding: 8px; */
-  }
+  } */

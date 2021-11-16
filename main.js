@@ -11,23 +11,6 @@ document.addEventListener("scroll", () => {
     }
 });
 
-//Arrow-up 색상 변경
-//
-const arrowUpBtn = document.querySelector('.arrow-up');
-const arrowUpBtnHeight = arrowUpBtn.getBoundingClientRect().height;
-document.addEventListener("scroll", () => {
-    if(window.scrollY > arrowUpBtnHeight) {
-        arrowUpBtn.classList.add('arrowUp--dark');
-    } else {
-        arrowUpBtn.classList.remove('arrowUp--dark');
-    }
-});
-
-//Arrow-up 선택 시 home으로 이동하기
-arrowUpBtn.addEventListener("click", (event) => {
-    scrollIntoView("#home");
-});
-
 //넷바 메뉴 선택 시 해당 부분으로 이동하기
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (event) => {
@@ -53,10 +36,25 @@ document.addEventListener("scroll", () => {
     home.style.opacity = 1 - window.scrollY/homeHeight;
 });
 
-// //arrow-up 투명도 조절
-//arrowUpBtn.addEventListener("scroll", () => {
-//    arrowUpBtn.style.opacity = window.scrollY*homeHeight + 0.1;
-// });
+//Arrow-up 색상 변경
+//
+const arrowUpBtn = document.querySelector('.arrow-up');
+const arrowUpBtnHeight = arrowUpBtn.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+    console.log(1 - window.scrollY/homeHeight);
+    if(window.scrollY/homeHeight > 1) {
+        // arrowUpBtn.classList.add('arrowUp--dark');
+        arrowUpBtn.style.opacity = 1;
+    } else {
+        // arrowUpBtn.classList.remove('arrowUp--dark');
+        arrowUpBtn.style.opacity = 0;
+    }
+});
+
+//Arrow-up 선택 시 home으로 이동하기
+arrowUpBtn.addEventListener("click", (event) => {
+    scrollIntoView("#home");
+});
 
 //햄버거 메뉴 클릭 시 
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
