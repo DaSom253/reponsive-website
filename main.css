@@ -316,15 +316,16 @@
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    position: relative;
   }
   
-  .category__btn.active,
+  .category__btn.selected,
   .category__btn:hover {
     background-color: var(--color-pink);
     color: var(--color-white);
   }
   
-  .category__btn.active .category__count,
+  .category__btn.selected .category__count,
   .category__btn:hover .category__count {
     opacity: 1;
     top: 0;
@@ -349,6 +350,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all var(--animation-duration) ease-out;
+  }
+
+  .work__projects.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
   }
   
   .project {
@@ -362,6 +370,10 @@
     background-color: var(--color-light-white);
   }
   
+  .project.invisible {
+    display: none;
+  }
+
   .project__img {
     max-width: 100%;
     max-height: 100%;
@@ -471,6 +483,27 @@
     transform: scale(1.1);
     color: var(--color-yellow);
   }
+
+    /* Arrow Up */
+    .arrow-up {
+      opacity: 0;
+      background-color: var(--color-pink);
+      padding: 8px 12px;
+      margin: 0 4px;
+      color: var(--color-white);
+      cursor: pointer;
+      
+      z-index: 1;
+      position: fixed;
+      bottom: 5%; left: 93%;  
+      border-radius: 50%;
+      transition: all var(--animation-duration) ease-in;
+    }
+  
+    .arrow-up>i {
+      font-size: var(--font-large);
+      color: var(--color-white);
+    }
   
   /* For below 768px screen width */
   @media screen and (max-width: 768px) {
@@ -515,31 +548,13 @@
       width: 80px;
       height: 80px;
     }
-  }
 
-  /* Arrow Up */
-  .arrow-up {
-    opacity: 0;
-    background-color: var(--color-pink);
-    padding: 8px 12px;
-    margin: 0 4px;
-    color: var(--color-white);
-    cursor: pointer;
-    
-    z-index: 1;
-    position: fixed;
-    bottom: 5%; left: 93%;  
-    border-radius: 50%;
-    transition: all var(--animation-duration) ease-in;
-  }
+    .category__btn {
+      width: 100%;
+      margin:4px 0;
+    }
 
-  .arrow-up>i {
-    font-size: var(--font-large);
-    color: var(--color-white);
+    .arrow-up {
+      bottom: 5%; left: 85%;
+    }
   }
-
-  /* .arrow-up.arrowUp--dark {
-    display: block;
-    background-color: var(--color-pink);
-    /* 자유 padding: 8px; */
-  } */
